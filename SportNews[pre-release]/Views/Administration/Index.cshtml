@@ -1,0 +1,15 @@
+﻿<form action="@Url.Action("AddPost","Administration")" method="post">
+	<p>Заголовок</p><input class="form-control" type="text" name="title" value="Заголовок" />
+	<p>Описание</p><input class="form-control" type="text" name="description" value="Описание"/>
+	<p>Дисциплина</p>
+    <select class="form-control" name="disciplineId">
+		<option hidden>Дисциплина</option>
+		@foreach (var discipline in Discipline.Disciplines)
+		{
+			<option value="@discipline.Id">@discipline.Name</option>
+		}
+	</select>
+	<p>Ссылка на картинку</p><input class="form-control" type="text" name="imageLink" value="https://i.gifer.com/XOsX.gif"/>
+	
+	<button type="submit">Добавить пост</button>
+</form>

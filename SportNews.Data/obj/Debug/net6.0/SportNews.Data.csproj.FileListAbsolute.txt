@@ -1,0 +1,15 @@
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.csproj.AssemblyReference.cache
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.AssemblyInfoInputs.cache
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.AssemblyInfo.cs
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.csproj.CoreCompileInputs.cache
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\bin\Debug\net6.0\SportNews.Data.deps.json
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\bin\Debug\net6.0\SportNews.Data.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\bin\Debug\net6.0\SportNews.Data.pdb
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\bin\Debug\net6.0\SportNews.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\bin\Debug\net6.0\SportNews.pdb
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.csproj.CopyComplete
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\refint\SportNews.Data.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\SportNews.Data.pdb
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.Data\obj\Debug\net6.0\ref\SportNews.Data.dll

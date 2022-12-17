@@ -1,0 +1,30 @@
+﻿<head>
+	<style>
+		.container-bordered {
+        width: 70ch;
+		margin-top: 20ch;
+		border-radius: 5%;
+		padding-top: 2ch;
+		padding-bottom:2ch;
+		padding-left:2ch;
+		padding-right:2ch;
+		}
+		p,h2{
+			color:aliceblue; 
+			margin-bottom: 0;
+		}
+		h2{
+			margin-bottom:1.1ch;
+		}
+	</style>
+</head>
+<form action="@Url.Action("Auth","Authentification")" method="post">
+	<div class="container mx-auto text-center container-bordered bg-dark">
+			<h2>ВХОД</h2>
+	<p>Логин</p><input class="form-control" type="text" name="login"/>
+	<p>Пароль</p><input class="form-control" type="text" name="password"/>
+	<button type="submit" class="btn btn-secondary" style="margin-top:10px">Войти</button>
+	
+	</div>
+</form>
+	<div class="container mx-auto text-center"><a>Нет аккаунта? </a><a href="@Url.Action("Index", "Registration")">Зарегистрируйтесь</a></div>

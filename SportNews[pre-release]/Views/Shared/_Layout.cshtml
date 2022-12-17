@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sport Results</title>
+    <link rel="icon" href="~/favicon.ico" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Store.Web.styles.css" asp-append-version="true" />
+    <style>
+        .nav-size{
+            height: 56px;
+        }
+        .indient{
+            margin-top: 60px;
+        }
+        .user-name{
+            width:150px;
+            color: #b79d3e;
+            padding-left:0;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .user-card{
+            display:inline-flex;
+            margin-left:10px;
+            background-color:#393939;
+            padding:4px;
+            width:245px;
+        }
+        .user-button{
+            width:90px;
+            font-size:15px;
+        }
+        .nav-contacts{
+            color:#fff;
+            transition: 0.3s;
+        }
+        .nav-contacts:hover{
+                color: #b79d3e;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-size">
+                <div class="container-fluid" style="width: 70%">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <strong>SPORT RESULTS</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item nav-contacts">
+                            <a class="nav-link active " asp-area="" asp-controller="Home" asp-action="Contacts">
+                                Контакты
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Дисциплины
+                            </a>
+                            
+                            <ul class="dropdown-menu form-control" id="disciplineId">
+                                @foreach (var discipline in Discipline.Disciplines)
+                                {
+                                    <li><a class="dropdown-item" href="@Url.Action("Index", "Home", new {disciplineId=discipline.Id})">@discipline.Name</a></li>
+                                }
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Index","Home")">Все дисциплины</a></li>
+                            </ul>
+                        </li>
+                        
+                            
+                        <li class="nav-item d-flex">
+                            @if (Context.Session.TryGetUser(out User user) && (user.Role == Role.Moderator))
+                            {
+                                <form action="@Url.Action("Index","Administration")" method="post">
+                                    <button class="btn btn-primary" type="submit">
+                                        Создать новый пост
+                                    </button>
+                                </form>
+                            }
+                            @if (Context.Session.TryGetUser(out User user2) && (user2.Role == Role.Administrator))
+                            {
+                            if (user.Role == Role.Administrator){
+                                <form action="@Url.Action("AdministrateUsers","Administration")" method="post">
+                                    <button class="btn btn-primary" type="submit">
+                                        Администрирование
+                                    </button>
+                                </form>
+                            }
+                            }
+                            
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search" method="post" action="@Url.Action("Index", "Home")">
+                                    <input style="width:150px" class="form-control me-2" type="search" placeholder="Запрос" aria-label="Search" name="query">
+                                            <button class="btn btn-outline-secondary" type="submit">
+                                                Поиск
+                                             </button>
+                                        
+                        </form>
+                        <div class="user-card">
+                        @{
+                        if (!Context.Session.TryGetUser(out User user1))
+                        {
+
+                                                                                    <form action=@Url.Action("Index","Authentification") method="post" style="display:inline-flex">
+                                                                                                <button class="btn btn-primary user-button" type="submit">Войти</button>
+                                                                                            </form>
+                                                                                    <div class="d-inline-flex p-2" style="display:inline-flex">
+                                                                                                <p class="user-name">
+                                                                                                    Гость
+                                                                                                </p>
+                                                                                            </div>
+                        }
+                        else
+                        {
+                                
+                                                                                            <form action=@Url.Action("Deauth","Authentification") method="post" style="display:inline-flex">
+                                                                                                <button class="btn btn-secondary user-button" type="submit">Выйти</button>
+                                                                                            </form>
+                                                                                            <div class"d-inline-flex p-2" style="display:inline-flex">
+                                                                                                <p class="user-name">
+                                                                                                    @user1.Name
+                                                                                                </p>
+                                                                                            </div>
+                        }
+                        }
+                        </div>
+                    
+                </div>
+            </div>  
+        </nav>
+        </div>
+    </header>
+
+    <div class="container indient">
+
+
+
+
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿@model User[]
+<style>
+	p{
+		font-size: 2ch;
+	}
+
+	.container-fluid {
+		display: inline-flex;
+		/* Центрируем по вертикали */
+		align-items: center;
+		/* Центрируем по горизонтали */
+		justify-content: center;
+	}
+
+}
+</style>
+
+@foreach (var user in Model)
+{
+	<div class="container-fluid " style=" text-align: center; min-width: 33%; max-width:33%; margin-bottom: 3ch; background-color:bisque; padding-left: 2ch; padding-right:2ch; padding-top:2ch;padding-bottom:2ch; border-style:dotted;">
+		<form action="@Url.Action("SwapRole","Administration")" method="post">
+			<input type="hidden" value="@user.Id" name="userId" />
+			<p>
+				<ul style="list-style-type:none; padding-left:0;">
+					<li style="display:inline">
+						<a>
+							ID: <strong>@user.Id</strong>
+						</a>
+					</li>
+					<li style="display:inline">
+						<a>
+							Name: <strong>@user.Name</strong>
+						</a>
+					 </li>     
+					 <li>
+						 <a>
+							Role: <strong>@user.Role.ToString()</strong>
+						 </a>
+					 </li>
+				</ul>
+			</p>
+			<a>Выбрать роль: </a>
+			<select class="form-control" name="roleId">
+				<option value="0">Moderator</option>
+				<option value="1">Common</option>
+				<option value="2">Adminitrator</option>
+			</select>
+			<button type="submit">Подтвердить</button>
+		</form>
+	</div>
+	
+}
+	

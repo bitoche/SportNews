@@ -1,0 +1,32 @@
+﻿<head>
+	<style>
+		.container-bordered {
+        width: 70ch;
+        margin-bottom: 5ch;
+		margin-top: 20ch;
+		border-radius: 5%;
+		padding-top: 2ch;
+		padding-bottom:2ch;
+		padding-left:2ch;
+		padding-right:2ch;
+		}
+		p,h2{
+			color:aliceblue; 
+			margin-bottom: 0;
+		}
+		h2{
+			margin-bottom:1.1ch;
+		}
+	</style>
+</head>
+<form action="@Url.Action("Registration","Registration")" method="post">
+	<div class="container mx-auto text-center container-bordered bg-dark">
+			<h2>РЕГИСТРАЦИЯ</h2>
+			<p class="text-bg-dark">Имя</p><input class="form-control" type="text" name="name"/>
+			<p class="text-bg-dark">Логин</p><input class="form-control" type="text" name="login"/>
+			<p class="text-bg-dark">Пароль</p><input class="form-control" type="text" name="password"/>
+			<p class="text-bg-dark">Повторите пароль</p><input class="form-control" type="text" name="confirmPassword"/>
+			<button type="submit" class="btn btn-secondary" style="margin-top:10px">Зарегистрироваться</button>
+		
+	</div>
+</form>

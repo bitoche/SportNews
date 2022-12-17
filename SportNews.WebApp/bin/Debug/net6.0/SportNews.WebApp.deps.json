@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SportNews.WebApp/1.0.0": {
+        "dependencies": {
+          "SportNews.Data": "1.0.0"
+        },
+        "runtime": {
+          "SportNews.WebApp.dll": {}
+        }
+      },
+      "SportNews/1.0.0": {
+        "runtime": {
+          "SportNews.dll": {}
+        }
+      },
+      "SportNews.Data/1.0.0": {
+        "dependencies": {
+          "SportNews": "1.0.0"
+        },
+        "runtime": {
+          "SportNews.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SportNews.WebApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SportNews/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SportNews.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

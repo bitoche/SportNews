@@ -1,0 +1,17 @@
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\bin\Debug\net6.0\SportNews.WebApp.deps.json
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\bin\Debug\net6.0\SportNews.WebApp.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\bin\Debug\net6.0\SportNews.WebApp.pdb
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.csproj.AssemblyReference.cache
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.AssemblyInfoInputs.cache
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.AssemblyInfo.cs
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\refint\SportNews.WebApp.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.pdb
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\ref\SportNews.WebApp.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\bin\Debug\net6.0\SportNews.Data.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\bin\Debug\net6.0\SportNews.dll
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\bin\Debug\net6.0\SportNews.Data.pdb
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\bin\Debug\net6.0\SportNews.pdb
+C:\Users\Geome\source\repos\SportNews\pre-release\SportNews[pre-release]\SportNews.WebApp\obj\Debug\net6.0\SportNews.WebApp.csproj.CopyComplete

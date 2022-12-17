@@ -1,0 +1,186 @@
+﻿@model PageModel<Post>
+@{
+    ViewData["Title"] = "SPORT RESULTS";   
+}
+
+
+<head>
+
+    <style>
+        img {
+            width: 75%;
+        }
+
+        body {
+            background-color: white;
+            background-attachment: fixed;
+            
+            
+            
+            background-image: url('source\bg-fifa.jpg');
+            background-color:rgba(0,0,0,0.1);
+            background-attachment:scroll;
+            
+
+        }
+
+        .container-footer {
+            position: static;
+        }
+
+
+        .main-container-main{
+            display:block;
+            width:100%;
+        }
+        .container-main {
+            margin:0 auto;
+            width:80%
+            /* margin-right: 10ch; */
+        }
+
+        .btn-main {
+            margin-right: 10px;
+        }
+
+        .container-news {
+            margin-top: 20px;
+            max-width: 75%;
+            border-radius: 3%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            margin-bottom: 5ch;
+        }
+
+        .img-news {
+            border-radius: 2%;
+        }
+
+        h2 {
+            padding-top: 0.5ch;
+            color: rgba(0, 0, 0, 0.5);
+            max-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        p {
+            max-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        href {
+            color: aqua;
+        }
+
+        .news-my {
+            max-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .btn-r {
+            float: right
+        }
+
+        .indient {
+            margin-top: 56px;
+        }
+
+        .p-2 {
+            padding: 0px !important
+        }
+        .publisher-data{
+            color: #b79d3e;
+            margin-left:0 auto;
+            margin-top:0;
+        }
+        .description{
+            margin-bottom:0;
+        }
+        .bg{
+            width:100%;
+            position:absolute;
+            z-index:-1;
+
+        }
+        .results{
+            margin-bottom:20px;
+        }
+    </style>
+
+</head>
+<body>  
+@*<img class="bg" src=" ~ /source/bg-fifa.jpg" />*@
+    <div class="container">
+		
+        <h1 class=" text-center" style="padding-top:10px; padding-bottom:10px;">НОВОСТИ</h1>
+        
+            <div class="container-main" >
+            @if (Model.Query != null)
+            {
+                <div class="results bg-dark">
+                    <a style="font-size: 24px; color: #000">
+                        Результаты по запросу "@Model.Query":
+                    </a>
+                </div>
+            }
+                <div style="text-align: left; " class="container-left">
+                
+                @if(Model.Items.Count()==0){
+                        <div class="bg-dark" >
+                            <a style="margin-left:10%;font-size: 24px; color: #fff">Извините, ничего нет. Загляните позже!</a>
+                        </div>
+                    }
+                    @foreach(var post in Model.Items)
+                    {
+                        <div style="margin-bottom: 7ch">
+                            <article class="data-container-news bg-dark" style="padding-top: 2ch; padding-bottom:1ch;">
+                                @{
+                                    if (Context.Session.TryGetUser(out var tempUser) && tempUser.Role == Role.Moderator)
+                                    {
+                                    <form action="@Url.Action("RemovePost","Administration")" method="get">
+                                        <input hidden value="@post.Id" name="postId">
+                                            <button class="btn btn-warning" style="margin-left:2ch" type="submit">
+                                                Удалить пост
+                                            </button>
+                                    </form>
+                                    }
+                                }
+                                <h2 class="geo mx-auto text-light">@post.Title</h2>
+                                    <img class="img-thumbnail img-news mx-auto" style="display: flex;" src="@post.Image">
+                                    <p class="description text-light" style="text-align:justify; ">&nbsp;&nbsp;&nbsp;&nbsp;@post.Description</p>
+                            <p class="publisher-data">Опубликовал @post.Author.Name @post.Created.ToString("f")</p>
+                                </article>
+                            </div>
+                    }
+
+
+
+                        <div class = "container">
+                            @if(Model.Pager.TotalPages > 1)
+                            {
+                                <ul class ="pagination justify-content-center">
+                                    @for(var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+                                    {
+                                        <li class ="page-item" @(page == Model.Pager.CurrentPage ? "active" : "")>
+                                            <a class = "page-link" href="@Url.Action("Index", "Home", new {query = Model.Query, page = page, disciplineId = Model.DisciplineId})">@(page)</a>
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                        </div>        
+                </div>       
+            </div>
+    </div>
+    
+</body>
+
